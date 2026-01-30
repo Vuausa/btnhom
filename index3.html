@@ -1,0 +1,124 @@
+<!DOCTYPE html> 
+ <!-- cho biet day la phien ban html moi nhat html 5 --> 
+    <head lang="vi">
+    <!-- cho biet cac cong cu tim kiem web bang   tieng viet  -->
+    <meta charset="UTF-8">
+    <!-- giup trinh duyet hienj thi co dau ma khong loi form  -->
+    <meta name = "viewport" content = "width=device-width,intial-scale=1.0">
+    <!-- Giup hien thi tren moi thiet bi-->
+    <title>Form Dang Ki Tai Khoan</title>
+    <!-- Tieu de cua trang web-->
+     <style>
+        body {
+            font-family: Arial, sans-serif;
+            /* chon kieu chu cho toan trang web neu khong co thi dung kieu sans-serif   */
+            background-color: #FFB6C1;
+            display: flex ;
+            /* can chinh vi tri  */
+            justify-content :center;
+            /* can giua theo chieu ngang */
+            align-items :center ;
+            /* can giua theo chieu doc */
+            height : 100vh ;
+            /* thiet lap khung hinh bang bao nhieu phan tram man hinh  */
+            margin : 0;
+            /* loai bo khoang cach le mac dinh ; */}
+            .register-form{
+                /* dinh nghia khung  chua du lieu  */
+
+                background-color: greenyellow;
+                /* mau cua cai khung do  */
+                padding : 20px 30px ;
+                /* tao khoang cach trong khung tren duoi trai phai  */
+                border-radius: 15px;
+                /* bo tron khung  */
+                box-shadow: 0 4px 10px  rgba(255, 0, 251, 0.489) ;
+                /* hieu ung bong do giup box noi hon */
+                width: 350px;
+                /* do rong cua form */
+            }
+            .register-form h2 {
+                /* dinh nghia tieu de cua registe-fomr */
+                text-align: center;
+                /* dua chu dang ki tai khoan ra giua */
+                color : rgb(44, 37, 37);
+                /* mau cua chu  */
+            } 
+            .form-group{
+                margin-bottom: 15px;
+                /* khoang cach giua cac dong  */
+            }
+            .form-group label {
+                display: block;
+                /* bien cai chu do thanh 1 khoi de chiem het 1 dong khi input se xuong dong */
+                margin-bottom:5px;
+                /* tao khoang cach giua cac chu voi label */
+                font-weight: bold;
+                /* in dam de phan biet voi du lieu input */
+            }
+            .form-group input{
+                width: 100%;
+                /* chiem hoan box  */
+                padding: 10px;
+                /* tao khoan cach giua cac chu  */
+                border: 1px solid palevioletred;
+                /* tao duong vien mong label input */
+                box-sizing: border-box;
+                /* ghi  chu thi se dieu chinh label input khi them padding */
+
+            }
+            
+                
+                .btn-submit {
+                    /* ... các dòng code cũ của bạn ... */
+                    width: 100px;
+                    margin: 20px auto; /* THÊM DÒNG NÀY: 20px để cách phía trên, auto để căn giữa cái nút */
+                    display: flex;     /* Giữ nguyên để căn giữa chữ bên trong nút */
+                    justify-content: center; 
+                    align-items: center;
+                    height: 40px;      /* Nên thêm chiều cao để flexbox căn giữa dọc rõ ràng hơn */
+                    
+                    background-color: #212118e2;
+                    border: none;
+                    color: aliceblue;
+                    border-radius: 5px; /* Nên thêm bo góc để nút trông hiện đại hơn */
+                    cursor: pointer;
+                }
+            
+            .btn-submit:hover{
+                /* hieu ung */
+                background-color: #4d484bd6;
+            }
+
+        
+        </style>
+        </head>
+        <body>
+            <div class = "register-form">
+                <!-- gom cac form vao 1 cho  -->
+                 <h2> Đăng kí tài khoản </h2>
+                 <form action ="/submit-registration" method ="post">
+                    <!-- dia chi xu li du lieu "/submit-registration" , phuong thuc gui du lieu post ngam an toan hon get -->
+                     <div class="form-group">
+                        <!-- tao mot cai hop bao quoanh o nhap -->
+                         <label for ="fullname"> Họ và Tên :</label>
+
+                         <input type = "text" id ="fullname" name = "fullname" placeholder="Nhap ten cua ban" required>
+                         <!-- input text tao o trong de nhap , id fullname dinh danh cua label, name ten du lioeu khi guiw ve may chu vd nhu la name=An,
+                         placeholder hien ghi chuot vao , required bat bupc phai nhap khong se khong gui dc -->
+                     </div>
+                     <div class="form-group">
+                         <label for="email">Email:</label>
+                         <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mật khẩu:</label>
+                        <input type="password" id="password" name="password" placeholder="Tối thiểu 6 ký tự" required>
+                        <button type="submit" class="btn-submit">Đăng Ký</button>
+                    </div>
+                    
+                </form>
+                </div>
+                </body>
+</html> 
+                     <!-- cac the dong    -->
